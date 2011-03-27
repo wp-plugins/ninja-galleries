@@ -3,7 +3,7 @@
 Plugin Name: Ninja Galleries
 Plugin URI: http://wpninjas.net/plugins/ninja-galleries/
 Description: Ninja Galleries lets you easily create image galleries by tagging your images and then assigning those tags to a gallery page.
-Version: 1.0
+Version: 1.0.1
 Author: Kevin Stover
 Author URI: http://www.wpninjas.net
 */
@@ -303,17 +303,18 @@ function mytheme_add_box2() {
 	//print_r($test);
 	$prefix = "wpnj_gallery_";
 	$wpnj_master_tags = array();
-	foreach($wpnj_test as $wpnj_var){
-		$new_item = array(
-				'name' => $wpnj_var->name,
-				'desc' => $wpnj_var->desc,
-				'id' => $prefix . $wpnj_var->slug,
-				'type' => 'checkbox',
-				'std' => ''
-		);
-		$wpnj_master_tags[] = $new_item;
+	if($wpnj_test){
+		foreach($wpnj_test as $wpnj_var){
+			$new_item = array(
+					'name' => $wpnj_var->name,
+					'desc' => $wpnj_var->desc,
+					'id' => $prefix . $wpnj_var->slug,
+					'type' => 'checkbox',
+					'std' => ''
+			);
+			$wpnj_master_tags[] = $new_item;
+		}
 	}
-
 	$meta_box2 = array(
 		'id' => 'gal',
 		'title' => 'Add Images Tagged With:',
