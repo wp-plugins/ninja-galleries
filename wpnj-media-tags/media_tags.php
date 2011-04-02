@@ -1,13 +1,4 @@
 <?php
-/*
-Plugin Name: Media Tags
-Plugin URI: http://www.codehooligans.com/projects/wordpress/wpnj-media-tags/
-Description: Provides ability to tag media/attachments via Media Management screens
-Author: Paul Menard
-Version: 2.2.9.2
-Author URI: http://www.codehooligans.com
-*/
-
 include_once ( dirname(__FILE__) . "/mediatags_config.php");
 include_once ( dirname(__FILE__) . "/mediatags_admin.php" );
 include_once ( dirname(__FILE__) . "/mediatags_rewrite.php");

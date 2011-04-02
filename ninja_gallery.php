@@ -3,39 +3,12 @@
 Plugin Name: Ninja Galleries
 Plugin URI: http://wpninjas.net/plugins/ninja-galleries/
 Description: Ninja Galleries lets you easily create image galleries by tagging your images and then assigning those tags to a gallery page.
-Version: 1.0.1
+Version: 1.0.2
 Author: Kevin Stover
 Author URI: http://www.wpninjas.net
 */
 
-/* --Old test code.
-function wpnj_gallery_display(){
-	global $post;
-	$post_id = $post->ID;
-	$wpnj_img_size = "thumbnail";
-	$test = wpnj_mediatags_load_master();
-	foreach($test as $val){
-		$wpnj_gal_field = "wpnj_gallery_" . $val->slug;
-		$meta = get_post_meta($post_id, $wpnj_gal_field, true);
-		if($meta){
-			if($wpnj_selected_tags == ""){
-				$wpnj_selected_tags = $val->slug;
-			}else{
-				$wpnj_selected_tags .= ',' . $val->slug;
-			}
-		}
-
-	}
-	$media_items = wpnj_get_attachments_by_media_tags('media_tags=' . $wpnj_selected_tags);
-	foreach($media_items as $media_item){
-		$image_src = wp_get_attachment_image_src($media_item->ID, $wpnj_img_size);
-		echo '<img src="'.$image_src[0].'">';
-	}
-}
-
-add_shortcode("wpnj_test", "wpnj_gallery_display");
-*/
-
+require_once("wpnj-media-tags/media_tags.php");
 function wpnj_gallery_post_display($content){
 	global $post;
 	$this_type = get_post_type($post->ID);
@@ -315,6 +288,7 @@ function mytheme_add_box2() {
 			$wpnj_master_tags[] = $new_item;
 		}
 	}
+
 	$meta_box2 = array(
 		'id' => 'gal',
 		'title' => 'Add Images Tagged With:',
