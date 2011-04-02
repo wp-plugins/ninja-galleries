@@ -9,7 +9,8 @@ Stable tag: 1.0.2
 Ninja Galleries lets you easily create image galleries by tagging your images and then assigning those tags to a gallery page.
 
 == Description ==
-*Version 1.0.1 fixes the PHP Warning that exists in v. 1.0. Please upgrade as soon as possible.*
+- Version 1.0.2 fixes an activation error that some users were experiencing when activating the plugin.
+- Version 1.0.1 fixes the PHP Warning that exists in v. 1.0. Please upgrade as soon as possible.
 
 First off, Ninja Galleries is based upon the excellent Media Tags plugin by Paul Menard. If you are looking to simply tag your images, then Media Tags is the plugin you need.
 Because Media Tags 3.0 is the tagging system used by this plugin, we strongly recommend that you do not use Media Tags and Ninja Galleries at the same time. Although we have gone
@@ -65,5 +66,11 @@ To get the gallery images to look the way you want, style <dl><dt> and <dd> elem
 
 == Changelog ==
 
+= 1.0.2 =
+Fixed an activation bug that some users were seeing.
+
+= 1.0.1 =
+
+* Fixed a PHP warning some users were seeing.
 = 1.0 =
 * First version of Ninja Galleries released.
