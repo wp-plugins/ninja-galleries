@@ -3,12 +3,13 @@ Contributors: kstover, jameslaws
 Donate link: http://wpninjas.net
 Tags: gallery, porfolio, images, galleries, image
 Requires at least: 3.0
-Tested up to: 3.0
-Stable tag: 1.0.2
+Tested up to: 3.1
+Stable tag: 1.0.3
 
 Ninja Galleries lets you easily create image galleries by tagging your images and then assigning those tags to a gallery page.
 
 == Description ==
+- Version 1.0.3 fixes a bug related to the onecolumn-page.php error.
 - Version 1.0.2 fixes an activation error that some users were experiencing when activating the plugin.
 - Version 1.0.1 fixes the PHP Warning that exists in v. 1.0. Please upgrade as soon as possible.
 
@@ -65,6 +66,8 @@ To get the gallery images to look the way you want, style <dl><dt> and <dd> elem
 	*Ability to create a custom url. Currently, the user is restricted to /gallery/, future versions of Ninja Galleries will correct this.
 
 == Changelog ==
+= 1.0.3 =
+Fixed a bug related to onecolumn-page.php.
 
 = 1.0.2 =
 Fixed an activation bug that some users were seeing.
