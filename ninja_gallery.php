@@ -3,7 +3,7 @@
 Plugin Name: Ninja Galleries
 Plugin URI: http://wpninjas.net/plugins/ninja-galleries/
 Description: Ninja Galleries lets you easily create image galleries by tagging your images and then assigning those tags to a gallery page.
-Version: 1.0.3
+Version: 1.0.4
 Author: Kevin Stover
 Author URI: http://www.wpninjas.net
 */
@@ -87,7 +87,9 @@ function wpnj_gallery_display_list($args){
 			echo '<dl class="gallery-item"><dt class="gallery-icon"><a href="';
 			the_permalink();
 			echo '">';
-			the_post_thumbnail('thumbnail');
+			if(function_exists('the_post_thumbnail')){
+					the_post_thumbnail('thumbnail');
+			}
 			echo '</a></dt><dd>';
 			the_title();
 			echo '</dd></dl>';
@@ -106,7 +108,9 @@ function wpnj_gallery_display_list($args){
 			echo '<dl class="gallery-item"><dt class="gallery-icon"><a href="';
 			the_permalink();
 			echo '">';
-			the_post_thumbnail('thumbnail');
+			if(function_exists('the_post_thumbnail')){
+					the_post_thumbnail('thumbnail');
+			}
 			echo '</a></dt><dd>';
 			the_title();
 			echo '</dd></dl>';
@@ -129,7 +133,9 @@ function wpnj_gallery_display_list($args){
 				echo '<dl class="gallery-item"><dt class="gallery-icon"><a href="';
 				the_permalink();
 				echo '">';
-				the_post_thumbnail('thumbnail');
+				if(function_exists('the_post_thumbnail')){
+					the_post_thumbnail('thumbnail');
+				}
 				echo '</a></dt><dd>';
 				the_title();
 				echo '</dd></dl>';
@@ -253,8 +259,9 @@ function wpnj_gallery_custom_columns($column){
 		{
 			case "thumbnail":
 				$custom = get_post_custom();
-				echo the_post_thumbnail(array('100px', '100px'));
-
+				if(function_exists('the_post_thumbnail')){
+					echo the_post_thumbnail(array('100px', '100px'));
+				}
 				break;
 			case "description":
 				$custom = get_post_custom();
