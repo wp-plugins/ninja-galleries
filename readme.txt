@@ -4,14 +4,17 @@ Donate link: http://wpninjas.net
 Tags: gallery, porfolio, images, galleries, image
 Requires at least: 3.0
 Tested up to: 3.1
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 
 Ninja Galleries lets you easily create image galleries by tagging your images and then assigning those tags to a gallery page.
 
 == Description ==
+- Version 1.0.4 fixes a bug related to themes not having post thumbnails enabled. (See note below about post thumbnails)
 - Version 1.0.3 fixes a bug related to the onecolumn-page.php error.
 - Version 1.0.2 fixes an activation error that some users were experiencing when activating the plugin.
 - Version 1.0.1 fixes the PHP Warning that exists in v. 1.0. Please upgrade as soon as possible.
+
+- Note - In order to use Ninja Galleries, your theme must have post thumbnails enabled. If you do not, you can still install Ninja Galleries, but there will be no functionality.
 
 First off, Ninja Galleries is based upon the excellent Media Tags plugin by Paul Menard. If you are looking to simply tag your images, then Media Tags is the plugin you need.
 Because Media Tags 3.0 is the tagging system used by this plugin, we strongly recommend that you do not use Media Tags and Ninja Galleries at the same time. Although we have gone
@@ -66,6 +69,10 @@ To get the gallery images to look the way you want, style <dl><dt> and <dd> elem
 	*Ability to create a custom url. Currently, the user is restricted to /gallery/, future versions of Ninja Galleries will correct this.
 
 == Changelog ==
+
+= 1.0.4 =
+Fixed a bug caused by not having post thumbnails enabled. Please note that you MUST have post thumbnails enabled in your theme in order for Ninja Galleries to work.
+
 = 1.0.3 =
 Fixed a bug related to onecolumn-page.php.
 
